@@ -1,0 +1,83 @@
+@media  screen and (max-width: 768px) {
+	#nav .tag{display: none;}
+	#nav .xiao{display: block;}
+	#part1-con{
+		width:420px;
+		margin: 0 auto;
+	}
+	.font1{
+		font-size: 22px;
+	}
+	.font2{
+		font-size: 14px;
+	}
+	.font2>span{
+		width: 300px;
+	}
+	.font5{
+		width: 370px;
+		font-size: 14px;
+	}
+	.font6{
+		font-size: 22px;
+	}
+	.font7{
+		font-size: 14px;
+	}
+	.font8{
+		font-size: 14px
+	}
+	.c1-pic{
+		width: 279px;
+		height: 351px;
+		background: url(../img/c1_min.jpg);
+	}
+	.c2-pic{
+		background: url(../img/c2_min.jpg) no-repeat;
+		width: 279px;
+		height: 351px;
+}
+.c3-pic{
+	background: url(../img/c3_min.jpg)no-repeat;
+	width: 279px;
+	height: 351px;
+}
+.part5{
+	width: 100%;
+	height: 500px;
+}
+.part6{
+	width: 100%;
+	height: 500px;
+}
+.part7{
+	width: 100%;
+	height: 500px;
+}
+.part8{
+	width: 100%;
+	height: 500px;
+}
+.part9{
+	width: 100%;
+	height: 500px;
+}
+.part10{
+	width: 100%;
+	height: 500px;
+}
+.tap{
+	display: none;
+}
+.tapmin{
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	border-bottom:  1px solid darkgray ;
+	line-height: 40px;
+	color: black;
+}
+.click{
+	float: right;
+}
+}

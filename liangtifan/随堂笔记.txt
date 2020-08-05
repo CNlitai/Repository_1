@@ -1,0 +1,88 @@
+2020.07.30
+parseInt("数字",进制) 以几进制解释数字
+   eg:   parseInt("011",2)    3
+对象也是一种数据的集合，多个键值对组成。
+    1.字面量“{}”做边界，键与值之间用冒号隔开，键值对之间用逗号隔开
+      var obj = {name:"terry",age:12,gender:“male”}
+    2.构造函数模式
+      使用object系统内置的对象构造函数，也能使用自定构造函数
+      var obj = new Object();  // var obj = {}
+      obj 是对象也被称为实例
+      object是类，也被称为构造函数，是创建对象的模板
+    2)属性访问（读写）
+      1.点访问
+        var obj = {name:"terry",age:12,gender:“male”}
+        对象.属性
+        var name = obj.name;
+        obj.name = 'terry';
+       2.[]括号访问
+       obj["name"]
+    3)属性遍历
+    打印出某个对象中所有的属性
+    for-in循环
+    for(var key in obj){
+       console.log(key,obj[key])
+    }   
+    依次从obj中获取属性名赋值给key，通过obj[key]访问属性值
+    4）对象序列化（什么是？为什么？
+    将对象转化为字符串的描述，方便网络传输，字符串可以传播，对象不可以
+    5）Object
+     所有父构造函数，所有的构造函数都直接或间接地继承object。所有的实例对象都可以调用其构造函数及其夫构造函数的原型中的方法。
+     object.prototype.toString()
+     object.prototype.valueOf()
+     object.prototype.constructor()
+    6)删除属性
+    delect 对象.属性
+     对比java对象，js对象特殊之处
+     1.js对象的属性可以删除
+     2.js对象的属性可以随意添加
+     3.js对象可以通过字面量以及构造函数来获取，java只能通过类
+    
+    7）自定义属性
+     var obj = {
+         name:"terry"
+     } 
+     name是可以迭代，可读可写的
+
+     vue 响应式 数据发生改变视图发生改变 
+     普通函数和构造偶函数在本质上是完全相同的，为了区分把构造函数大写
+     普通函数（方法）
+     构造函数（类）
+     1.函数声明   允许在函数声明前调用函数  
+     function 函数名（形参）{ }
+     2.函数表达式
+     类似于普通的赋值表达式，变量会提升，但函数的初始化不会被提升
+     3.函数的调用
+     函数（实参）；
+     函数名.call(this,实参列表)
+     函数名.apply（this,实参数组）
+
+数值是用于保存多个值的集合，索引访问元素，索引从0开始
+
+2020.07.31
+forEach() 数组的遍历(循环/访问)
+arguments 保存函数的所有实参(数组的所有元素)，是一个类数组对象
+arguments.callee 指向当前函数，常用于递归函数(在用户use strict严格模式下无法使用)
+    //num 阶乘  递归
+    function foo(num){
+      if(num === 1){
+        return 1;
+      }else{
+        return arguments.callee(num - 1)*num;
+      }
+    }
+    console.log(foo(4));
+6）函数本质     函数和构造函数的区别是： 调用的方式不同
+     函数的本质是一种为特殊对象，默认情况下，一个函数都会有一个原型对象与之对应，函数中有个指针prototype指向原型对象，原型对象中有个construor指向函数，
+   你中有我 我中有你。
+  Array.*
+  array.isArray() 判断变量是否为数组
+  Array.fromArray() 将一个可迭代的对象转化为数组
+  Array.of() 将参数中的值作为数组的元素
+
+2020.08.03
+  一个函数在内存上边分为两块，一块为函数本身，另一块为函数的原型，你中有我 我中有你相互指向。
+  
+
+
+

@@ -1,0 +1,326 @@
+body,p,input,div,a,li {
+    margin: 0;
+    list-style: none;
+    border-color: #ffffff;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+li {
+    display: inline;
+}
+span {
+    width: 100px;
+    display: inline-block;
+    padding-left: 30px;
+}
+/* 对input输入框设置 */
+input {
+    line-height: 30px;
+    border:1px solid #f4f4f4;
+    border-radius: 25px;
+    font-size: 20px;
+    float: left;
+    background-color: #f4f4f4;
+}
+#span1 {
+    text-align: center;
+}
+/* 包含图标，搜索，购物车的div设置 */
+.menu {
+    /* border: solid; */
+    height: 100px;
+    width: 1090px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.menu {
+    margin-top: 1em;
+}
+
+.menu > div {
+    float: left;
+    width: 360px;
+    height: 150px;
+    margin-right: 1px;
+    /* border: solid; */
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu:nth-child(3) {
+    margin-right: 0;
+    border: solid;
+}
+/* 需要将logo图片纵向居中 */
+.menu > .logo {
+    padding-top: 25px;
+}
+/* 导航栏中搜索栏的设置 */
+.menu > .search {
+    padding-top: 35px;
+}
+/* 适当使用后代选择器 */
+.menu  .search_text {
+    /* border: solid; */
+    height: 50px;
+    width: 356px;
+    background-color: #cc9656;
+    padding-left: 17px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+.menu  .cart {
+    padding-top: 35px;
+    padding-left: 100px;
+}
+.menu  .cart_img {
+    border: solid;
+    border-radius: 25px;
+    /* border: 1px; */
+    border-color: #cc9656;
+    padding-left: 50px;
+    width: 150px;
+}
+/* 接下来就是关于二级菜单项 */
+.menu + * {
+    /* border: solid; */
+    width: 1090px;
+    height: 100px;
+    margin: 0 auto;
+}
+.container {
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.container > i {
+    font-size: 30px;
+}
+/* 试着将li重置在开头处 */
+.container > ul.nav::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.container > .nav > li > .nav_son {
+    float: left;
+    position: relative;
+    width: 110px;
+    text-align: center;
+    line-height: 2em;
+    cursor: pointer; 
+}
+/* 该处将下拉二级菜单背景改为透明 */
+.container > .nav >li > .nav_son > ul:hover {
+    /* background-color: #ffffff; */
+    background-color: transparent;
+    color: #003262;
+}
+.container > .nav >li > span:hover {
+    background-color: #cc9656;
+    border-radius: 25px;
+}
+
+.container > ul.nav > li > ul.nav_son {
+    position: absolute;
+    color: #003262;
+    display: none;
+}
+ul.nav >li:hover > ul.nav_son {
+    display: block;
+}
+ul.container > .nav > li {
+    margin: 20px;
+    width: 100px;
+}
+/* 设置二级菜单下拉后位置情况 */
+.nav_son_ul {
+    margin-left: 75px;
+    width: 80px;
+}
+.nav_son_ul1 {
+    margin-left: 210px;
+    width: 80px;
+}
+.nav_son_ul2 {
+    margin-left: 345px;
+    width: 80px;
+}
+/* 想要将二级下拉菜单分为两部分也就是说让两个div在ul下并排显示
+可能用到display：inline block */
+/* .container > .nav > li > .nav_son > .nav_son1 {
+    display: inline-block;
+    box-sizing: border-box;
+    
+} */
+/* .container > .nav > li > .nav_son > .nav_son1 > .nav_son_ul {
+    float: left;
+} */
+/* 开始对body盒子设置 */
+.body {
+    margin: 0 auto;
+    /* border-style: solid; */
+    border-color: #000000;
+    height: 642px;
+    width: 1090px;
+}
+.body > i {
+    font-size: 30px;
+}
+/* 对body盒子添加主要布局 */
+.recommand {
+    margin-bottom: 1em;
+    background-color: #ffffff;
+}
+.recommand > ul.products {
+    width: 1090px;
+    margin: 0 auto; 
+    padding: 1em 0;
+}
+.recommand > ul.products::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.recommand > ul.products > li {
+    float: left;
+    width: 223px;
+    height: 300px;
+    margin-right: 10px;
+    background-color: pink;
+    border-radius: 15px;
+}
+.recommand > ul.products > li:first-child{
+    width: 391px;
+    height: 610px;
+}
+.recommand > ul.products > li:nth-child(4),
+.recommand > ul.products > li:nth-child(7){
+    margin-right: 0;
+}
+
+.recommand > ul.products > li:nth-child(2),
+.recommand > ul.products > li:nth-child(3),
+.recommand > ul.products > li:nth-child(4) {
+    margin-bottom: 10px;
+}
+/* news栏的设置 */
+.news {
+    margin-bottom: 1em;
+}
+.news > ul.list {
+    width: 1090px;
+    margin: 0 auto;
+    padding: 5em 0;
+}
+.news > ul.list::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.news > ul.list > li  {
+    height: 300px;
+    float: left;
+    width: 265px;
+    margin-right: 10px;
+    margin-bottom: 1em;
+}
+.news > ul.list > li:nth-child(4n){
+    margin-right: 0;
+}
+.news li.item {
+    text-align: center;
+}
+.news li.item > .picture{
+    height: 220px;
+    padding-top: 1em;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.news .introduce {
+    background-color: pink;
+    border-radius: 20px;
+}
+/* 鼠标悬停改变字体颜色 */
+.news .introduce .name:hover {
+    color:teal;
+}
+.news .introduce > .active {
+    background-color: #e36844;
+    color: #ffffff;
+    display: inline-block;
+    margin: 2px;
+}
+.news .introduce > .price {
+    color: #e36844;
+    padding-left: 30px;
+
+}
+/* 此处想要设置鼠标悬停图片覆盖 */
+.news .picture {
+    z-index: 10px; 
+    margin: 0 auto;
+    background-image: url(./images/4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 170px; */
+}
+.news .picture:hover {
+    /* background-image: url(./images/4.png); */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* font-size: 170px; */
+    /* z-index: 20px;  */
+}
+.news .picture:hover > img {
+    overflow: hidden;
+    display: none;
+
+}
+
+/* 左侧固定导航栏 */
+.indexleftbar {
+    width: 120px;
+    height: 300px;
+    border-radius: 20px;
+    border: solid;
+    border-color: pink;
+    position:fixed;
+    margin-left: 85px;
+    top:62px!important
+}
+.indexleftbar > .indexleftbar_items {
+    height: 50px;
+    margin-bottom: 20px;
+    /* border: solid; */
+}
+.itemicon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    float: left;
+    /* border: solid; */
+}
+.itemtext {
+    margin-left: 50px;
+    width: 65px;
+    height: 50px;
+}
+
+.indexrightbar {
+    width: 120px;
+    height: 300px;
+    border: solid;
+    border-radius: 20px;
+    border-color: pink;
+    position:fixed;
+    margin-left: 1398px;
+    top:62px!important
+}
+
+.iconfont {
+    font-family: "iconfont"!important;
+    font-size: 30px;
+}

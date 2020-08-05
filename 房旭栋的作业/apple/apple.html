@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      font-family: Arial;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+    h3 {
+      margin: 15px auto 15px;
+    }
+    body,ul,li,p {
+      margin: 0;
+      border: none;
+    }
+    ul,li,p {
+      padding: 0;
+      list-style: none;
+    }
+    .ad {
+      /* width: 1536.2px; */
+      height: 40px;
+      position: sticky;
+      background-color: #444444;
+      top: 0;
+      left: 0;
+      right: 0;
+      box-sizing: border-box;
+      margin: 0 auto;
+      position: sticky;
+      z-index: 100;
+    }
+
+    .ad2 {
+      width: 63.54%;
+      height: 40px;
+      margin: 0 auto;
+      position: relative;
+      /* vertical-align: middle; */
+      /* display: inline-block; */
+    }
+
+    .header {
+      /* width: 1519.2px; */
+      height: 44px;
+      background-color: #010101;
+      position: sticky;
+      top: 2.5em;
+      opacity: .9;
+      z-index: 100;
+    }
+    .hdrson {
+      width: 1024px;
+      height: 44px;
+      margin: 0 auto;
+      padding: 0 3px;
+      /* background-color: #f4f4f4; */
+    }
+    .hdrson > ul {
+      width: 1000px;
+      height: 44px;
+      border: none;
+      margin: 0 auto;
+      /* background-color: teal; */
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .hdrson > ul >li {
+      height: 44px;
+      width: 6.4%;
+      padding: 15px 8px; 
+      /* text-align: center; */
+      box-sizing: border-box;
+      color: #cccccc;
+      font-size: 14px;
+    }
+    .wrapper {
+      width: 1519.2px;
+      height: 690px;
+      background-color: #131313;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .wrapper > .xinkuan {
+      font-size: 14px;
+      margin: 0 auto;
+      color: #bf4805;
+      position: relative;
+      top: 3.5em;
+    }
+    .wrapper > .dazi {
+      font-size: 54px;
+      line-height: 1.07143;
+      font-weight: 600;
+      color: #f5f5f7;
+      position: relative;
+      top: 0.1em;
+      margin-bottom: 0;
+      z-index: 2;
+    }
+    .wrapper > h3 > .jiage {
+      font-size: 24px;
+      color: #f5f5f7;
+      font-weight: 500;
+      padding-left: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .wrapper > .jiage2 {
+      color: #86868b;
+      margin-top: 0px;
+      position: relative;
+      z-index: 2;
+    }
+    .wrapper > .more {
+      width: 196px;
+      height: 29px;
+      font-size: 18px;
+      margin: 12px auto 0;
+      color: #2997ff;
+      position: relative;
+    }
+    /* .wrapper > .seimg > .iPhonese2 {
+      
+    } */
+    
+    .seimg {
+      /* width: 2560px; */
+      position: relative;
+      top: -6.5em;
+    }
+    .seiimg11,.seimgmac {
+      position: relative;
+    }
+    /* 100% */
+    @media screen and (width: 1519.2px){
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+    }
+    /* 110% */
+    @media screen and (max-width:1519px){
+      .wrapper {
+        width: 1392.6px;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+      .seimg > img.iPhone11 {
+        width:1592px
+      }
+    }
+    /* 120% */
+    @media screen and (max-width:1391px){
+      .header {
+        width: 1266px;
+      }
+      .hdrson {
+        width: 1266px;
+      }
+      .wrapper {
+        width: 1266px;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+      .seimg > img.iPhone11 {
+        width:1620px
+      }
+    }
+    /* 130% */
+    @media screen and (max-width:1265px){
+      .wrapper {
+        width: 1171px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+      .seimg > img.iPhone11 {
+        width:1660px
+      }
+    }
+    /* 140% */
+    @media screen and (max-width:1170px){
+      .wrapper {
+        width: 1076px;
+      }
+      .header {
+        width: 1076px;
+      }
+      .hdrson {
+        width: 1076px;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .seimg > img.iPhonese {
+        width: 1100px;
+      }
+      .seimg > img.iPhone11 {
+        width:px
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+
+    }
+    /* 150% */
+    @media screen and (max-width:1075px) {
+      .header {
+        width: 1012.5px;
+      }
+      .hdrson {
+        width: 988.5px;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .wrapper {
+        width: 1012.5px;
+      }
+      .seimg > img.iPhonese {
+        width: 900px;
+      }
+      .seimg {
+        top: -7em;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 160% */
+    @media screen and (max-width:1012px) {
+      .header {
+        width: 949.5px;
+      }
+      .hdrson {
+        width: 949.5px;
+      }
+      .hdrson > ul {
+        width: 925.5px;
+      }
+      .hdrson > ul > li {
+        width: 7%;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .wrapper {
+        width: 949.5px;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 170% */
+    @media screen and (max-width:949px) {
+      .header {
+        width: 886.2px;
+      }
+      .hdrson {
+        width: 886.2px;
+      }
+      .hdrson > ul {
+        width: 886.2px;
+      }
+      .hdrson > ul > li {
+        width: 7.5%;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .wrapper {
+        width: 886.2px;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 180% */
+    @media screen and (max-width:886px) {
+      .header {
+        width: 854.5px;
+      }
+      .hdrson {
+        width: 854.5px;
+      }
+      .hdrson > ul {
+        width: 854.5px;
+      }
+      .hdrson > ul > li {
+        width: 7.5%;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .wrapper {
+        width: 854.5px;
+      }
+      .seimg {
+        top: -6em;
+      }
+      .seimg > img.iPhonese {
+        width: 850px;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 190% */
+    @media screen and (max-width:854px) {
+      .header {
+        width: 791.2px;
+      }
+      .hdrson {
+        width: 791.2px;
+      }
+      .hdrson > ul {
+        width: 791.2px;
+      }
+      .hdrson > ul > li {
+        width: 8.1%;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .wrapper {
+        width: 791.2px;
+      }
+      .seimg {
+        top: -6em;
+      }
+      .seimg > img.iPhonese {
+        width: 800px;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 200% */
+    @media screen and (max-width:791px) {
+      .header {
+        width: 759.5px;
+      }
+      .hdrson {
+        width: 759.5px;
+      }
+      .hdrson > ul {
+        width: 759.5px;
+      }
+      .hdrson > ul > li {
+        width: 8.5%;
+      }
+      .hdrson > ul > li.hideen {
+        display: none;
+      }
+      .wrapper {
+        width: 759.5px;
+      }
+      .seimg {
+        top: -6em;
+      }
+      .seimg > img {
+        width: 760px;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 210% */
+    @media screen and (max-width:759px) {
+      .header {
+        width: 727.9px;
+      }
+      .hdrson {
+        width: 727.9px;
+      }
+      .hdrson > ul {
+        width: 727.9px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 727.9px;
+      }
+      .seimg {
+        top: -6em;
+      }
+      .seimg > img.iPhonese {
+        width: 740px;
+      }
+      .wrapper > .dazi {
+        font-size: 48px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 20px;
+      }
+      .seimg > img.iPhonese2 {
+        display: none;
+      }
+    }
+    /* 220% */
+    @media screen and (max-width:727px) {
+      .header {
+        width: 696.3px;
+      }
+      .hdrson {
+        width: 696.3px;
+      }
+      .hdrson > ul {
+        width: 696.3px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 696.3px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 230% */
+    @media screen and (max-width:696px) {
+      .header {
+        width: 664.6px;
+      }
+      .hdrson {
+        width: 664.6px;
+      }
+      .hdrson > ul {
+        width: 664.6px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 664.6px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 240% */
+    @media screen and (max-width:664px) {
+      .header {
+        width: 633.2px;
+      }
+      .hdrson {
+        width: 633.2px;
+      }
+      .hdrson > ul {
+        width: 633.2px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 633.2px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 250% */
+    @media screen and (max-width:633px) {
+      .header {
+        width: 601.3px;
+      }
+      .hdrson {
+        width: 601.3px;
+      }
+      .hdrson > ul {
+        width: 601.3px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 601.3px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 260% */
+    @media screen and (max-width:601px) {
+      .header {
+        width: 569.7px;
+      }
+      .hdrson {
+        width: 569.7px;
+      }
+      .hdrson > ul {
+        width: 569.7px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 569.7px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 270% */
+    @media screen and (max-width:569px) {
+      .header {
+        width: 569.3px;
+      }
+      .hdrson {
+        width: 569.3px;
+      }
+      .hdrson > ul {
+        width: 569.3px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 569.3px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 280% */
+    @media screen and (max-width:569px) {
+      .header {
+        width: 538.1px;
+      }
+      .hdrson {
+        width: 538.1px;
+      }
+      .hdrson > ul {
+        width: 538.1px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 538.1px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 290% */
+    @media screen and (max-width:538px) {
+      .header {
+        width: 538.1px;
+      }
+      .hdrson {
+        width: 538.1px;
+      }
+      .hdrson > ul {
+        width: 538.1px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 538.1px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    /* 300% */
+    @media screen and (max-width:538px) {
+      .header {
+        width: 506.4px;
+      }
+      .hdrson {
+        width: 506.4px;
+      }
+      .hdrson > ul {
+        width: 506.4px;
+      }
+      .hdrson > ul > li {
+        display: none;
+      }
+      .hdrson > ul > .li1 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+
+        display: block;
+      }
+      .hdrson > ul > li.hideen {
+        display: block;
+      }
+      .wrapper {
+        width: 506.4px;
+      }
+      .seimg {
+        top: -1em;
+      }
+      .seimg > img.iPhonese {
+        display: none;
+      }
+      .seimg > img.iPhonese2 {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .wrapper > .dazi {
+        top: .8em;
+        font-size: 30px;
+      }
+      .wrapper > h3 > .jiage {
+        font-size: 16px;
+        top: .8em;
+      }
+      .wrapper > .jiage2 {
+        top: .8em;
+        font-size: 12px;
+      }
+      .wrapper > .more {
+        font-size: 16px;
+        top: .8em;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="ad">
+    <div class="ad2">
+      <span style="position: absolute;right: 0em;margin: 10px 0;font-size: 12px;color: thistle;">
+        <广告>
+      </span>
+    </div>
+  </div>
+  <div class="header">
+    <div class="hdrson">
+      <ul>
+        <li class="hideen">=</li>
+        <li class="li1" style="padding: 0 8px"><img src="https://www.apple.com.cn/ac/globalnav/6/zh_CN/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__cxwwnrj0urau_large.svg"></li>
+        <li>Mac</li>
+        <li>iPad</li>
+        <li>iPhone</li>
+        <li>Watch</li>
+        <li>Music</li>
+        <li style="font-size: 12px;">技术支持</li>
+        <li>8</li>
+        <li>9</li>
+        <li class="hideen">10</li>
+      </ul>
+    </div>
+  </div>
+  <p style="text-align: center;vertical-align: middle;"><span style="font-size: 13px;line-height: 44px"><a href="">在线选购</a>，享受免费送货、Specialist 专家支持、免息分期等服务。</span></p>
+  <div class="wrapper">
+    <span class="xinkuan">新款</span>
+    <h2 class="dazi">iPhone SE</h2>
+    <h3>
+      <span class="jiage">称心称手，超值入手。<br>RMB 3299起</span>
+    </h3>
+    <p class="jiage2">折抵换购，仅 RMB 96/月或 RMB2299起。</p>
+    <div class="more">
+      <a class="lefta" href="" style="position:relative;left:-1em;z-index: 2;">进一步了解 > </a>
+      <a class="lefta" href="" style="position:relative;right:-1em;z-index: 2;">购买 > </a>
+
+    </div>
+    <div class="seimg">
+      <img class="iPhonese" src="./iPhonese.jpg" alt="">
+      <br><br><br>
+      <img class="iPhonese2" src="./iPhonese2.jpg" alt="">
+    </div>
+  </div>
+  <div class="wrapper" style="background-color: #fafafa;">
+    <h2 class="dazi" style="color: #1d1d1f;">iPhone 11</h2>
+    <h3>
+      <span class="jiage" style="color: #1d1d1f;">一切都刚刚好</span>
+    </h3>
+    <p class="jiage2">折抵换购，仅 RMB 175/月或 RMB4199起。</p>
+    <div class="more">
+      <a class="lefta" href="" style="position:relative;left:-1em;z-index: 2;">进一步了解 > </a>
+      <a class="lefta" href="" style="position:relative;right:-1em;z-index: 2;">购买 > </a>
+
+    </div>
+    <div class="seimg" style="top: -5em;">
+      <img class="iPhone11" src="./iPhone11.jpg" alt="">
+    </div>
+  </div>
+  <div class="wrapper" style="background-color: #f1f1f3;">
+    <h2 class="dazi" style="color: #1d1d1f;">为高校生活购买Mac<br>或 iPad,AirPods 搭配其中</h2>
+    <div class="more">
+      <a class="lefta" href="" style="position:relative;right:-1em;z-index: 2;">选购 > </a>
+
+    </div>
+    <div class="seimg" style="top: -13em;left: -45em;">
+      <img class="mac" src="./mac.jpg" alt="">
+    </div>
+  </div>
+  
+  <div style="height:800px"></div>
+</body>
+
+</html>

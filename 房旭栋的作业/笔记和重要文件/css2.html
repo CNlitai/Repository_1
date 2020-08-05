@@ -1,0 +1,77 @@
+6.目录及操作步骤
+    Linux目录介绍：
+        /bin (系统操作指令) /sbin /home /root /mnt /usr（不是user） /dev /apt(第三方文件安装) sys /var（第三方软件 例如apache2）
+                可执行文件目录      家目录    磁盘  系统目录         设备                     
+                node.js：（解析xml，适应所有系统） js功能强大
+    
+    目录管理：
+        超级管理可以操作任意目录和文件
+        普通用户默认情况下可以操作家目录中的任意目录及文件
+        sudoer：是超级管理员授权的用户
+            
+        从超级管理员切换到普通用户：su - zhangsan
+
+        $man 
+            (manuals手册)
+            man cd(查看cd有关的文档)
+
+
+        cd:
+            change directory
+            cd /    切换到根目录下
+            cd /home/zhangsan/webui 切换到webui【/ 绝对路径】
+            cd webui 切换到webui下【相对路径】
+            cd ..   上一级
+            cd .    当前
+            cd ~    回家
+            cd      回家
+
+        mkdir:
+            mkdir webui
+            mkdir javaee/corejava/list
+            mkdir android ios(同时创建两个目录)
+            mkdir -p javaee/corejava/list(如果不存在父目录则-p可直接创建一个父目录)
+
+
+        rm -r javaEE (接连删除)
+
+        touch
+        touch a.txt
+        当文件不存在的时候创建文件，当文件存在的时候修改其最近访问时间
+
+        more:
+            预览
+
+        cp:（拷贝，粘贴）
+        sudo more
+        sudo ！历史编号 （history编号）
+        ！！：上一个命令
+        vi:yy:复制 dw：删除一个单词 u: 撤销   p：粘贴 dd:删除一行（命令行模式下进行）
+        发呆时间：过段时间就得重新验证身份（输入密码）
+
+        mv：(剪切)
+
+        ls：
+            打印当前目录下的子目录及文件
+            ls -a 列出指定目录下的所有文件及目录
+            ls -l 长格式
+            ls -al
+            
+        vim:（vim的配置文件，这个文件一般位于用户家目录下 .vimrc）
+            编辑器（Linux）三种模式：命令行模式，插入模式，底行模式
+
+            .vimrc
+            
+            命令行模式 --i,a,o,I,A,O-->插入模式（i：在当前字符前插入，I：在当前行前插入，a：在当前字符后插入，A：在当前行最后插入，o：当前行下方新建一行，O：当前行上方新建一行）
+                    <--ESC--
+            命令行模式 --：/--> 底行模式(保存并退出)
+                    <--ESC--
+            左下角无提示就是命令行
+
+            :w d.txt(新建文件必须命名文件名才能保存)
+            :w e.txt(另存为e.txt)
+            :set nu(显示行号)           spf13
+
+        网络命令：
+            wget
+            curl

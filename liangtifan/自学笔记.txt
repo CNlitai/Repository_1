@@ -1,0 +1,104 @@
+1. window.alert() 弹出警告框
+   document.write("") 将内容写在html文档中
+   innerHTML 写入到HTML元素中
+     eg：document.getElementById("demo").innerHTML = "段落已修改。";
+         将“段落已修改”写入ID为demo的元素中
+         <DOCTYPE html>
+         <html>
+         <head>
+         <meta charset="utf-8">
+         <script>
+         function myFunction(){
+            document.getElementById("ltf").innerHTML = "梁倜凡";
+         }
+          </script>
+         </head>
+         <body>
+         <p id = "ltf">1999.09.29</p>
+         <button type ="button" onclick ="myFunction()">点击试试</button>
+         </body>
+         </html> >
+
+   console.log() 内容写入到浏览器控制台
+2. 从 JavaScript 访问某个 HTML 元素，使用 document.getElementById(id) 方法。
+3. 字面量 = 固定值 eg：3.14
+   Array定义一个数组  Object定义一个对象  Function定义一个函数
+   var是用来定义变量的
+4."\"表示文本换行 "//"单行注释 "/*  */"多行注释
+5.布尔（逻辑）只能有两个值：true 或 false。
+6.var 对象 = {属性:"值"，属性:"值"};  字符串用双引号 数字不需要
+  eg：对象中 lastname为person的属性之一   
+  person.lastname = person["lastname"]   两种访问对象属性的方式
+  属性后加（）为方法  不加（）为属性，返回属性定义值 eg: 方法fullName()  属性fullName
+
+JS 函数！！
+   1. 函数包裹在花括号中的代码块，前面使用了关键词 function：
+        function functionname()
+         {
+            // 执行代码
+         }
+   2. 当调用带参数的函数时，可以发送任意多的参数，在声明函数时，参数作为变量来声明
+        eg：<script>
+            function myFunction(name,job) {
+               alert("Welcome" + name +",the" + job);
+            }
+            </script>
+            <button onclick="myFunction('ltf','stu')">点击</button>
+      return 返回函数值/将代码退出函数循环
+   3.如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。
+        eg： carname = "Volvo"  会声明 window 的一个属性 carname
+
+JS 作用域！！
+   1.  在 JavaScript 中, 作用域为可访问变量，对象，函数的集合。
+       局部变量（函数内声明变量 function内）在函数执行完毕后销毁。全局变量（函数外声明变量 function外）在页面关闭后销毁。 
+
+JS 事件！！
+   1. 在 HTML 页面中使用 JavaScript 时， JavaScript 可以触发这些事件。
+     onmouseover	用户在一个HTML元素上移动鼠标 onmouseout	用户从一个HTML元素上移开鼠标
+     onkeydown	用户按下键盘按键 onload	浏览器已完成页面的加载
+
+JS 字符串！！
+   1. 不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用。
+      === 为绝对相等，即数据类型与值都必须相等。
+   2. 字符串属性constructor	返回创建字符串属性的函数
+                length	返回字符串的长度
+                prototype	允许您向对象添加属性和方法
+      字符串方法......https://www.runoob.com/js/js-strings.html
+   
+JS 运算符！！
+   如果把数字与字符串相加，结果将成为字符串！
+JS 比较和逻辑运算符！！
+   === 为绝对相等，即数据类型与值都必须相等。
+   !== 不绝对等于（值和类型有一个不相等，或两个都不相等）
+JS switch！！  switch(){case 1:  break;case2: break;default:  }   
+JS for 循环！！
+   for (var i=0;i<cars.length;i++)······（循环前执行；循环条件；循环后执行）
+   { 
+       document.write(cars[i] + "<br>");
+   }
+JS break 和 continue 语句！！
+   break 语句用于跳出循环。continue 用于跳过循环中的一个迭代（跳过接下来的步骤，进行下一次循环）。
+
+   typeof 操作符来检测变量的数据类型
+     eg：typeof "John"                // 返回 string
+         typeof 3.14                  // 返回 number
+         typeof false                 // 返回 boolean
+         typeof [1,2,3,4]             // 返回 object
+         typeof {name:'John', age:34} // 返回 object
+   null是一个只有一个值的特殊类型。表示一个空对象引用。
+     eg：var person = null;           // 值为 null(空), 但类型为对象
+   你可以设置为 undefined 来清空对象:
+     eg：var person = undefined;     // 值为 undefined, 类型为 undefined
+   null === undefined           // false
+   null == undefined            // true   
+
+JS 类型转换！！
+   注意：NaN 的数据类型是 number
+        数组(Array)的数据类型是 object
+        日期(Date)的数据类型为 object
+        null 的数据类型是 object
+        未定义变量的数据类型为 undefined
+   constructor 属性返回所有 JavaScript 变量的构造函数。
+     eg："John".constructor                 // 返回函数 String()  { [native code] }
+         (3.14).constructor                 // 返回函数 Number()  { [native code] }
+         

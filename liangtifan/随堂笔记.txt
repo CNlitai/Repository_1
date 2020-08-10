@@ -91,8 +91,56 @@ arguments.callee 指向当前函数，常用于递归函数(在用户use strict�
   Array.*
   array.isArray() 判断变量是否为数组
   Array.fromArray() 将一个可迭代的对象转化为数组
-  Array.of() 将参数中的值作为数组的元素
+  Array.of() 将参数中的值作
 
-正则表达式
+  dom
+    1）api结构
+            node 
+            节点类型
+      Element  Document Text   Comment
+      HTMLElement  htmldocument
+      htmldivelement
+
+      实例对象
+      据大多数的标签转换成的JS对象都称为Element的实例对象
+
+      document  是HTMLDocument的实例对象
+
+  2）API介绍
+      1.node
+
+
+      2.Element    元素节点
+
+      3.Document
+      getElementById
+      getElementByName
+      getElementByTagName
+
+
+      事件
+      默认事件行为
+      <a>标签 form标签 没有添加行为绑定事件  但操作后有事件行为
+      事件冒泡
+        1.元素具有嵌套关系
+      <div class="outer">
+        <div class="center">
+       	  <div class="inner"></div>
+        </div>
+      </div>
+
+        2.每层元素都绑定事件处理函数
+        3.操作
+           当我们点击inner，实际上也点击center、outer
+           事件捕获  outer center inner
+           事件处理函数的调用默认是按照事件冒泡来调用
+           事件冒泡   inner  center  outer
+        4.target 目标元素    操作的元素
+
+      事件绑定
+       事件源.on事件类型 = 事件处理函数（事件对象）{ }
+      1.onXxx
+      2.addEventListener()
+      3.attachEvent()
 
 

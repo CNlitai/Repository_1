@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            font-family: "微软雅黑";
+        } */
+        p {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-size: 22px;
+            color: #eeeeee;
+            font-family: "微软雅黑";
+        }
+        #xiugai {
+          position: relative;
+          left: 15em;
+          top: -15em;
+        }
+        .view {
+            width: 100%;
+            height: 1000px;
+        }
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: skyblue;
+            box-shadow: 2px 2px 2px teal;
+            border-radius: 5px;
+            padding: 15px 20px;
+            box-sizing: border-box;
+        }
+        .left {
+            margin-top: 2px;
+            height: 898px;
+            width: 200px;
+            background-color: #eeeeee;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px teal;
+        }
+        .right {
+            position: relative;
+            width: 1301px;
+            height: 898px;
+            background-color: #eeeeee;
+            top: -56.1em;
+            left: 12.7em;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px teal;
+            box-sizing: border-box;
+            padding: 80px 100px;
+        }
+        .form_son {
+            margin: 5px;
+
+        }
+        .btn {
+            box-sizing: border-box;
+            width: 100px;
+            height: 40px;
+            border-radius: 3px;
+            font-family: "微软雅黑";
+            color: skyblue;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="view">
+        <div class="header">
+            <strong><p>学生信息管理系统</p></strong>
+        </div>
+        <div class="left">
+            
+        </div>
+        <div class="right" style="width: 1301px;">
+            <form id="form_login" action="http://localhost:7788/user/login" method="POST">
+                <div style="font-weight: 600;font-size:22px;color: skyblue;position: relative;top: -3em;left: -4em;"><span>请您先登录:</span></div>
+                <div class="form_son" style="font-weight: 600;color: skyblue;">用户名: <input type="text" name="username" style="border-style: none;"></div>
+                <div class="form_son" style="font-weight: 600;color: skyblue;">密&nbsp;&nbsp;&nbsp;&nbsp;码: <input type="password" name="password" style="border-style: none;"></div>
+                <div class="form_son" style="padding-top: 20px;padding-left: 70px;"><input class="btn" type="submit" value="登录"></div>
+            </form>
+            <div id="content" style="display: none;">
+                欢迎您,  <span id="user_info"></span>
+            
+                <table>
+                  <thead>
+                    <tr>
+                      <th>编号</th>
+                      <th>姓名</th>
+                      <th>头像</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="user_info1"></td>
+                      <td id="user_info2"></td>
+                      <td id="user_info3"></td>
+                      <td>
+                        <a href="">删除</a>
+                        <a href="">修改</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <input id="btn1" class="btn" type="button" value="分页查询">
+                <input id="btn_add" class="btn" type="button" value="添加用户">
+                <div id="fenye" style="display: none;">
+                    <table  id="tbl_user">
+                        <thead>
+                          <tr>
+                            <th>编号</th>
+                            <th>姓名</th>
+                            <th>头像</th>
+                            <th>操作</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td id="user1" class="user"></td>
+                            <td id="user2" class="user"></td>
+                            <td id="user3" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user4" class="user"></td>
+                            <td id="user5" class="user"></td>
+                            <td id="user6" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user7" class="user"></td>
+                            <td id="user8" class="user"></td>
+                            <td id="user9" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user10" class="user"></td>
+                            <td id="user11" class="user"></td>
+                            <td id="user12" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user13" class="user"></td>
+                            <td id="user14" class="user"></td>
+                            <td id="user15" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user16" class="user"></td>
+                            <td id="user17" class="user"></td>
+                            <td id="user18" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user19" class="user"></td>
+                            <td id="user20" class="user"></td>
+                            <td id="user21" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user22" class="user"></td>
+                            <td id="user23" class="user"></td>
+                            <td id="user24" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user25" class="user"></td>
+                            <td id="user26" class="user"></td>
+                            <td id="user27" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td id="user28" class="user"></td>
+                            <td id="user29" class="user"></td>
+                            <td id="user30" class="user"></td>
+                            <td>
+                              <a href="" class="btn_del">删除</a>
+                              <a href="" class="btn_edit">修改</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+              <div id="xiugai" style="display: none;">修改后的id:<input id="txt_xiugai" type="text">
+                  <input id="btn_xiugai" class="btn" type="button" value="确定">
+              </div>
+        </div>
+    </div>
+    
+    <script>
+        var token;
+        var user;
+         var $form = document.querySelector("#form_login");
+         var $content = document.querySelector("#content");
+         var $fenye = document.querySelector("#fenye");
+         var $user_info = document.querySelector("#user_info")
+         var $user_info1 = document.querySelector("#user_info1")
+         var $user_info2 = document.querySelector("#user_info2")
+         var $user_info3 = document.querySelector("#user_info3")
+         var $btn1 = document.querySelector("#btn1")
+         var $user1 = document.querySelector("#user1")
+         var $user2 = document.querySelector("#user2")
+         var $user3 = document.querySelector("#user3")
+         var $user4 = document.querySelector("#user4")
+         var $user5 = document.querySelector("#user5")
+         var $user6 = document.querySelector("#user6")
+         var $user7 = document.querySelector("#user7")
+         var $user8 = document.querySelector("#user8")
+         var $user9 = document.querySelector("#user9")
+         var $user10 = document.querySelector("#user10")
+         var $user11 = document.querySelector("#user11")
+         var $user12 = document.querySelector("#user12")
+         var $user13 = document.querySelector("#user13")
+         var $user14 = document.querySelector("#user14")
+         var $user15 = document.querySelector("#user15")
+         var $user16 = document.querySelector("#user16")
+         var $user17 = document.querySelector("#user17")
+         var $user18 = document.querySelector("#user18")
+         var $user19 = document.querySelector("#user19")
+         var $user20 = document.querySelector("#user20")
+         var $user21 = document.querySelector("#user21")
+         var $user22 = document.querySelector("#user22")
+         var $user23 = document.querySelector("#user23")
+         var $user24 = document.querySelector("#user24")
+         var $user25 = document.querySelector("#user25")
+         var $user26 = document.querySelector("#user26")
+         var $user27 = document.querySelector("#user27")
+         var $user28 = document.querySelector("#user28")
+         var $user29 = document.querySelector("#user29")
+         var $user30 = document.querySelector("#user30")
+         var $tbl_user = document.querySelector("#tbl_user")
+         var $btn_add = document.querySelector("#btn_add")
+         var $xiugai = document.querySelector("#xiugai")
+         var $btn_xiugai = document.querySelector("#btn_xiugai")
+         var $txt_xiugai = document.querySelector("#txt_xiugai")
+        //  console.log(btn1.value);
+
+         $form.onsubmit = function(event){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","http://localhost:7788/user/login")
+            xhr.setRequestHeader("Content-Type","application/json;charset=utf-8")
+            var username = document.querySelector("#form_login input[name=username]").value;
+            var password = document.querySelector("#form_login input[name=password]").value;
+            var data = {
+                username:username,
+                password:password
+            }
+            xhr.send(JSON.stringify(data))
+
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var resp = JSON.parse(xhr.response);
+                        console.log(resp);
+                        if(resp.status === 200){
+                            token = resp.data.token;
+                            getInfo();
+                            getUsersInfo();
+                            $form.style.display = "none";
+                            $content.style.display = "block";
+                        } else {
+                            alert(resp.message);
+                        }
+                    }
+                }
+            }
+            event.preventDefault();
+         }
+         function getInfo(){
+             var xhr = new XMLHttpRequest();
+             xhr.open("GET","http://localhost:7788/user/info?token="+token)
+             xhr.setRequestHeader("Authorization",token);
+             xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+             
+             xhr.send()
+             xhr.onreadystatechange = function(){
+                 if (xhr.readyState === 4) {
+                     if (xhr.status === 200) {
+                         var resp = JSON.parse(xhr.response)
+                         user = resp.data;
+                         console.log(user)
+                         $user_info.innerText = user.realname;
+                         $user_info1.innerText = user.id;
+                         $user_info2.innerText = user.realname;
+                         $user_info3.innerText = "无";
+
+                     }
+                     
+                 }
+             }
+             }
+
+             function getUsersInfo(){
+             var xhr = new XMLHttpRequest();
+             xhr.open("GET","http://localhost:7788/baseUser/pageQuery?page=1&pageSize=10")
+             xhr.setRequestHeader("Authorization",token);
+             xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+             
+             xhr.send()
+             xhr.onreadystatechange = function(){
+             $btn1.onclick = function(){
+                 if (xhr.readyState === 4) {
+                     if (xhr.status === 200) {
+                        //  if(id="42"){
+                         var resp = JSON.parse(xhr.response)
+                         user = resp.data;
+                         console.log(user.list[0].username)
+                         $user1.innerText = user.list[0].id;
+                         $user2.innerText = user.list[0].username;
+                         $user3.innerText = "无";
+                         $user4.innerText = user.list[1].id;
+                         $user5.innerText = user.list[1].username;
+                         $user6.innerText = "无";
+                         $user7.innerText = user.list[2].id;
+                         $user8.innerText = user.list[2].username;
+                         $user9.innerText = "无";
+                         $user10.innerText = user.list[3].id;
+                         $user11.innerText = user.list[3].username;
+                         $user12.innerText = "无";
+                         $user13.innerText = user.list[4].id;
+                         $user14.innerText = user.list[4].username;
+                         $user15.innerText = "无";
+                         $user16.innerText = user.list[5].id;
+                         $user17.innerText = user.list[5].username;
+                         $user18.innerText = "无";
+                         $user19.innerText = user.list[6].id;
+                         $user20.innerText = user.list[6].username;
+                         $user21.innerText = "无";
+                         $user22.innerText = user.list[7].id;
+                         $user23.innerText = user.list[7].username;
+                         $user24.innerText = "无";
+                         $user25.innerText = user.list[8].id;
+                         $user26.innerText = user.list[8].username;
+                         $user27.innerText = "无";
+                         $user28.innerText = user.list[9].id;
+                         $user29.innerText = user.list[9].username;
+                         $user30.innerText = "无";
+                         $fenye.style.display = "block";
+                         
+                        //  }
+                     }
+                     
+                 }
+             }
+             }
+             }
+             $tbl_user.onclick = function(event){
+                var target = event.target;
+                if(target.nodeName === 'A'){
+                    switch(target.getAttribute("class")){
+                    case "btn_del":
+                        confirm("删除")
+                        target.parentNode.parentNode.parentNode.removeChild(target.parentNode.parentNode)
+
+                        break;
+                    case "btn_edit":
+                        confirm("修改")
+                        $xiugai.style.display = "block";
+                        break;
+                    }
+                    // 阻止
+                    event.preventDefault();
+                }
+                }
+                $btn_add.onclick = function(){
+                    var $new_tr = document.createElement("tr");
+                    // alert(1);
+                    $new_tr.innerHTML = `
+                        <td> id </td>
+                        <td> 张某某 </td>
+                        <td> 无 </td>
+                        <td>
+                            <a href="" class="btn_del">删除</a>
+                            <a href="" class="btn_edit">修改</a>
+                        </td>
+                    `;
+                    //添加一行
+                    $tbl_user.children[1].appendChild($new_tr);
+                    }
+                $btn_xiugai.onclick = function(){
+                  var xiugai = document.getElementById("txt_xiugai").value;
+                  console.log(xiugai)
+                  var resp = JSON.parse(xhr.response)
+                         user = resp.data;
+                         $user1.innerText = xiugai;
+                  alert("修改为",+xiugai)
+                }
+             
+        //      $btn1.onclick = function(event){
+        //         //  alert(1);
+                
+        //  }
+    </script>
+</body>
+</html>

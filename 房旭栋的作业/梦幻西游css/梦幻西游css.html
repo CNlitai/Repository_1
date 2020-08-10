@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦幻西游</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container > .bg {
+            width: 3920px;
+            height:786px;
+        }
+        .bg_ul > li {
+            float: left;
+        }
+
+        .wk {
+            width: 200px;
+            height: 180px;
+            overflow: hidden;
+            position: absolute;
+            left: 25em;
+            top: 25em;
+            z-index: 5;
+        }
+        .wk > img {
+            animation-name: move;
+            animation-timing-function: steps(8);
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        /* 八戒 */
+        .bj {
+            width: 200px;
+            height: 180px;
+            overflow: hidden;
+            position: absolute;
+            left: 40em;
+            top: 25em;
+            z-index: 5;
+        }
+        .bj > img {
+            animation-name: move;
+            animation-timing-function: steps(8);
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        .ts {
+            width: 170px;
+            height: 240px;
+            overflow: hidden;
+            position: absolute;
+            left: 53em;
+            top: 23em;
+            z-index: 5;
+        }
+        .ts > img {
+            animation-name: move2;
+            animation-timing-function: steps(8);
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        /* 沙僧 */
+        .ss {
+            width: 210px;
+            height: 220px;
+            overflow: hidden;
+            position: absolute;
+            left: 67em;
+            top: 25em;
+            z-index: 5;
+        }
+        .ss > img {
+            animation-name: move3;
+            animation-timing-function: steps(8);
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .bg {
+            width: 13920px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container > .bg > .bg_ul > li.li1 > img {
+            animation-name: dong;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+
+        @keyframes move {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: -1600px;
+            }
+        }
+        @keyframes move2 {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: -1360px;
+            }
+        }
+        @keyframes move3 {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: -1680px;
+            }
+        }
+        @keyframes dong {
+            from {
+                margin-left: -1920px;
+            }
+            to {
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wk"><img src="./images/wukon.png" alt=""></div>
+        <div class="bj"><img src="./images/bajie.png" alt=""></div>
+        <div class="ts"><img src="./images/tangsen.png" alt=""></div>
+        <div class="ss"><img src="./images/shaseng.png" alt=""></div>
+        <div class="bg">
+            <ul class="bg_ul">
+                <li class="li1"><img src="./images/2.jpg" alt=""></li>
+                <li class="li2" style="left: 50em;"><img src="./images/2.jpg" alt=""></li>
+            </ul>                
+        </div>
+    </div>
+</body>
+</html>

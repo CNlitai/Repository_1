@@ -1,0 +1,98 @@
+百度搜索“云翼计划”图片: https://uploader.shimo.im/f/iOAgwNdledVWa2EW.png
+选择——云服务器ECS
+
+选择购买时长，之后会提示登录（建议选择支付宝注册登录，25周岁以下可以免去实名认证）
+系统会自动创建一个实例，所有步骤完成后会提示你的外网ip地址（需牢记）
+
+服务器的简单配置及使用
+安装Apache
+在终端中输入
+apt install apache2
+完成Apache服务器的安装
+安装完成后，进行相应的程序使用，以达到我们所预期的效果。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+首先需要linux系统（Mac自动忽略此段）
+1.阿里云服务器（ECS轻量化服务器）:
+
+官网即可获得：阿里云官网
+附：阿里针对学生所提供的优惠，凡是不满24周岁的学生，可享9.5/月的ECS服务器优惠购买。
+购买成功后，千万牢记ip和root密码，最好截图或者文字保存，虽然百度可找到各种忘记密码的解决方案，但最好还是避免不必要的问题。
+2.通过虚拟机：
+1.首先下载虚拟机：Vmware workstationpro 15(最好是新版本，不然会遇到第二次开机就死机的情况)
+2.再者，找到Linux系统的镜像：
+1):centos7（本人使用）
+2):ubuntu 16_04 / ubuntu 18_04 (老师推荐的) /*明天再写关于安装详情*/
+3.还有其他方法，待我查完补充。。。
+
+Linux安装好之后
+对代码不熟悉的直接跳下面FileZilla便捷操作
+1.首先明确我们要用到的指令：
+主要：
+apt update /apt-get update 
+apt-get install xxxx(本文主要涉及的是关于apache2的下载)
+需要用到的文件：
+/etc/apt/source.list 
+（该文件是一个普通可编辑的文本文件，保存了ubuntu软件更新的源服务器的地址.）
+  第一步：我们需要将sources.list文件内容更换，更换为阿里镜像
+一，定位找到 etc下apt下sources.list文件
+       1）：打开linux终端，使用root超级管理员：
+su root
+cd etc&&cd apt&&vim sources.list
+(如果忘了root密码的话，可使用sudo passwd更改新密码，前提是该普通用户为sudoer，具体操作百度即可)
+二，将sources.list文件原本的内容删除
+       2）：进入vim编辑器后首先是命令行模式，只需陆续输入：10dd（dd：删除该行）将原本的sources.list内容删除
+三，找到关于阿里的sources.list镜像
+       3）： 阿里sources.list镜像
+4）：将上面超链接内提到的内容复制。在vim编辑器中，按下i进入编辑模式，然后粘贴到sources.list中
+这里要注意，在linux终端中不可使用Ctrl+v快捷键，可使用右键选择粘贴（paste）
+5）：按ESC键退出编辑模式，进入命令行模式，输入
+:wq
+第二步：先不要急着下载安装，先将apt，apt-get更新
+一，输入以下代码更新apt，apt-get
+apt update&&apt-get update
+上面代码可分开进行：apt update 之后再apt-get update（中间的空格不要忽略）
+第三步：接下来就可以下载安装了
+一，输入以下代码下载安装apache2
+apt-get install apache2
+最后如果你的apache2配置成功，那么应该就是下面这个网页显示了：
+图片: https://uploader.shimo.im/f/lVp0XXXmuNlZtD3w.png
+附：不熟悉Linux操作的还可百度搜索FileZilla，操作简单易上手
+如何使用FileZilla将sources.list文件修改
+该步骤从Linux安装好之后开始
+一，在官网上下载FileZilla
+二，下载好之后，打开FileZilla
+主机：一般写：sftp（可以尝试一下ftp方式）
+用户名：默认都为：root
+密码：阿里云root密码
+端口：默认为：22（登录阿里云时可以查看）
+三，登录成功后中间栏会进行提示
+左半栏为客户电脑的本地文件
+右半栏为阿里云服务器的文件（root文件）
+四，开始进行操作将sources.list换掉（右半栏）
+1）：首先默认进入root文件，点击 ../ 即可返回到根目录
+2）：找到etc/apt 下方控制栏会出现文件内的内容
+3）：找到sources.list文件，双击就会下载到本地（本地位置自己在左半栏选择一下就好）
+4）：以记事本方式打开下载好的source.list文件，将这个镜像里的代码复制并完全覆盖source.list文件里的内容  阿里sources.list镜像
+5）：在左半栏找到刚修改完的source.list文件双击进行上传，会弹出一个对话框询问是否覆盖，点击是
+6）：完成修改
+五：在阿里云服务器里输入：
+apt update&&apt-get update
+apt-get install apache2
+成功后的显示界面翻上
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var c;
+        var d;
+        function gbs(a,b){
+            if(a>b){
+                c = a/b;
+                if(a%b==0){
+                    console.log("最小公倍数：",c)
+                    
+                }
+                else{
+                    
+                    if(b%(a%b)==0){
+                        d=b/(a%b)
+                        console.log("最小公倍数为：",d) 
+                    }
+                    else{
+                        d=a*b;
+                        console.log("最小公倍数为：",d)
+                    }
+                }
+            }
+        }
+        gbs(4,6)
+        
+
+
+
+
+        //最小公倍数求法：
+        // 1.先比较大小
+        // 2.大数除以小数
+        // 3.如果没有余数，则小数为最小公倍数
+        // 4.如果有余数，则用小数除以余数
+        // 5.如果除不尽，则最小公倍数为大数乘小数
+        // 6.如果可以除尽，则商为最小公倍数
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

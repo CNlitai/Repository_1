@@ -1,0 +1,397 @@
+52css
+1.介绍
+    层叠样式表
+
+表面
+    结构    身材    html
+    装饰    化妆    css
+    内涵    谈吐    js
+
+2.语法
+
+    1）在html中如何引入css
+        1.将css规则直接填写在style属性中
+        2.将样式嵌入到style标签
+        3.将样式写在.css文件中，再通过link将这个文件引入到html中
+
+    2）语法组成
+
+        选择器{
+            规则
+            属性：值；
+            属性：值；
+        }
+
+        .nav(类选择器) {
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+3.选择器
+        1）核心选择器
+            标签选择器
+                div {}
+                ul {}
+            类选择器
+                .nav {}
+            id选择器
+                #id {}
+            组合选择器
+                body, ul {}
+            并且选择器
+                ul.nav {}
+        2）层次选择器（主要针对于块元素）
+            1.父子选择器
+                父元素 > 子元素
+                .nav > li {}
+                #wrapper > * {}
+                .ringht_nav > li {}
+            2.后代选择器
+                父元素   子元素
+                .right_nav li {}
+            3.下一个（相邻）兄弟选择器
+                .right_nav > p + * {}
+            4.之后所有兄弟选择器
+                .right_nav > p ~ * {}
+            5.伪类选择器【过滤器】(选取状态，例如：hover，)
+                ul.nav > li:first-child {}
+                ul.nav > li:last-child {}
+                ul.nav > li:nth-child (2n){}
+                ul.nav > li:nth-child (odd(奇数)/even（偶数）){}
+                :hover
+                    ul.nav > li:hover {
+                        background-color: teal;
+                    }
+            6.伪元素选择器【过滤器】伪元素：自定义标签（display：block）（只能在浮动情况下使用？）
+                ul.nav::after {
+                    display: block;
+                    clear: both;
+                    content: "";
+                }
+
+            7.属性选择器【过滤器：已选择的选择器进行筛选择；对表单进行选择】
+                form > input[name=username] {}(选择具有name属性并且name值等于“username”)
+                form > input[name^=u] {}(选择具有name属性并且name值第一个字母为u)
+                form > input[name$=e] {}(选择具有name属性并且name值最后一个字母为e)
+
+4.优先级
+        特权
+                !important
+        权值（权值一样则后者覆盖前者）
+            style属性               1000
+            id选择器                100
+            标签选择器(派生选择器)   1
+            class，伪类选择器        10
+
+5.布局（针对块元素的显示/diy）
+    默认布局：
+            块元素（独占一行）
+    浮动布局：（多个子元素（块元素）在一行中显示）
+            分支主题(div重置)
+                float:left
+                clear:both
+    定位布局：
+            
+    伸缩盒布局：(块元素)
+            1.外边距    margin
+            2.边框      border
+                border:1px solid #ccc;
+            3.内边距    padding：1px 2px 3px 4px;
+                                1px 2px 3px;上1px 左右2px 下3px
+
+    盒子模型
+        1）怪异盒模型（IE） jquery - 银行
+            vue/react/angular 不支持ie8-
+            盒子所占的宽度 = width （包含了border + padding + 内容宽）
+                box-size：
+                content-box：width不包括
+                border-box：width包括padding之类的
+        2)传统盒子：（width不包括border之类）
+        3)关于背景：background-color:
+                   background-image:
+                   background-size:contain(包含，自动伸缩)
+                   background-position:center(中心)/bottom right(右下角)/50px 100px（疑问）
+                   background-clip:
+                   background-repeat:
+                   background-origin:
+    
+    浮动布局：（多个子元素（块元素）在一行中显示）
+            层次关系
+            1.float：left
+                1) 块元素脱离当前文档流
+                    1.默认宽度为0
+                    2.失去了对父元素支撑的能力【伪元素】
+                2）在浮动流中，多个浮动元素在一行中显示，当这一行容纳不下会自动换行
+            2.清理浮动
+                为容器内部添加一个子元素，一般使用伪元素比较方便
+                ul.list::affter {
+                    content:"";
+                    display:block;
+                    clear:both;
+                }
+            3.盒子居中
+                margin：0 auto；
+7.文本规则
+    针对与盒子的内容来进行修饰，具有可继承性
+        1）text-align:center（文本水平居中）
+        2）height：50px；
+           line-height：50px；（文本垂直居中）
+           2）line-height：50px；（直接设置行高，默认子元素行高等于容器height）
+        关于文本溢出（若指定容器height则不会扩张父元素）
+        3）overflow：hidden（将溢出文本隐藏）
+           overflow: scroll;（将溢出文本设置滚动条）
+           overflow
+
+
+8.字体规则
+    font-family：“”
+    font-weight：bold/bolder/100~900
+    font-style：italic/normal
+    font：font-size；font-height；font-family；
+    font:12px/1.5 "微软雅黑"
+9.实体
+&nbsp;空格（通常可以用em来表示：1em=16px）
+&lt;小于
+&gt;大于
+10.其他规则
+    <span>span是行内元素不可指定宽度，只能添加display属性：line-block</span>
+    display：inline-block;
+    vertical-align：middle；(div不可使用)
+    list-style
+    border-collapse:collapse; 加在table上
+    *******************************透明度：***************************************
+        opacity:.2;
+
+    网络字体
+        1.获取字体文件
+            woff，eot
+        2.定义网络字体
+        @font-face {
+            font-family：“iconfont”；
+            src：“”
+        }
+        3.使用
+        //基础样式
+        .iconfont {
+            font-size:14px;
+            font-family：“iconfont”！important;
+        }
+        //特殊样式
+        <span class="iconfont-icon-icon-test"></span>(fontclass)
+        /
+        <span class="iconfont">&#ex46</span>(unicode)
+        
+11.单位
+    绝对单位
+        10px
+
+
+    相对单位
+        1em ，em相对于当前元素的字体大小
+        1rem ，rem相对于html元素选择器中设定的字体大小
+
+    颜色
+        关键字  pink
+        十六进制    #ffffff
+        函数    rgb（114，141，153）
+                rgba（0，0，0，.2）（a为透明程度0~100%）background-color：rgba（）只会改变背景透明度，而不会改变文本 
+            
+12.背景色
+    background-position
+        背景图片的位置
+    background-image
+        url("图片地址")
+    background-repeat
+        repeat/norepeat/repeat-x
+    background-origin
+        border-box/padding-box/content-box
+    background-clip
+        border-box/padding-box/content-box
+    background-size
+        contain
+        cover
+        100px 200px
+            border-collopse:表格中边框的合并
+13.定位布局
+    position:static;//默认，静态
+        relative
+            相对点：该元素在文档流中初始位置
+            是否脱离文档流：不脱离（原来的位置仍然存在，对原来的布局不会产生特殊影响，一般用来强制变为父定位元素）
+            最佳实践：一般不移动，作为相对点
+        absolute
+            相对点：距离他最近的父定位元素，如果没有父定位元素那么就只能相对浏览器视口
+            是否脱离文档流：是
+        fixed
+            相对点：相对于视口，并且不会随着浏览器的滚动而滚动 
+            是否脱离文档流：脱离
+        sticky
+            相对点：
+            是否脱离文档流：脱离
+            通过top bottom left right来设置位置
+    当position的取值为relative absolute fixed sticky之一
+    ，我们就认为当前这个元素为定位元素，定位布局可以使用定位属性，
+    比如left，right，top，bottom，
+14.伸缩盒布局：
+        作用：与浮动布局的作用类似，用于将一个容器中多个资源苏【块元素】在一行中多列排列，常用于响应式布局
+        （移动端使用多一些）
+              
+
+        使用:
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            ul 容器
+                display:flex;   让容器变成伸缩盒布局
+                flex-direction:row/colum;   容器排列方向
+            li 子元素
+                flex-wrap:       是否换行
+                justify-content: space-around,space-between      剩余空白空间的安排（环绕或者夹杂）
+                flex-basis:      主轴基准值，初始分配（优先级高）
+                flex-grow：      除去基准值剩下的如何分配
+                flex-shrink：    主轴中有亏损，对带有flex-grow的元素进行缺省
+                flex each
+
+                flex             速写
+            ul {
+                display:flex;
+            }
+        bootstrap3  浮动
+        bootstrap4  伸缩盒
+            
+
+15.动画，过度，变形
+    animation transition transform
+    1）动画
+        使用：
+            1.关键帧的定义
+             @keyframes 动画名称 {
+                 from{
+
+                 }
+                 to{
+
+                 }
+             }
+             @keyframes 动画名称 {
+                 0%{
+
+                 }
+                 50%{
+
+                 }
+                 100%{
+
+                 }
+             }
+             2.动画设定
+              animation-name
+              animation-duration;
+              anima
+              <!-- 见动画.html. -->
+            3.动画库
+                1.打开网页的时候可能一开始有白屏
+                    1）加强服务器！
+                    2）faster mini
+                        1.图片压缩
+                        2.图片合并（图标）
+                        3.cdn加速
+                          将库【iconfont】放到cdn服务器
+                2.使用
+                    1.获取cdn连接
+                    link
+                    2.使用class
+                        基础规则
+
+                        特殊规则
+    2)过渡
+        1.更加简单的动画，没有动画帧
+        2.需要触发
+
+        transition-propoerty  需要过渡的属性
+            all
+            transition-duration  持续时间
+            transition-timingfunction  时间曲线函数
+            linear steps（） easy
+            transition-delay  延迟时间
+            transition ： property duration delay timing；
+    3）变形
+        transform：
+             scale（以中心放大）
+             rotate（旋转度数：45deg）
+             skew（倾斜：45deg）
+             origin（原点位置，以哪个位置转动）
+             translateX/Y(平移)
+        
+
+
+17.响应式布局
+    1）pc端
+        1.类似与腾讯视频
+            容器的宽度随着品目的分辨率大小的改变而改变
+        2.纯响应式
+             完全兼容
+            媒体查询
+                @media screen and {min-width:1300px} { //在达到minwidth：1300px时width变为1200px
+                    .products {
+                        width:1200px;
+                    }
+                }
+    2）mobile端
+        手机型号不同，宽度不同
+
+        1.不要给容器【块元素】指定宽度，让他默认为100%
+        2.子元素【列元素】宽度是用相对单位或百分比
+
+18.bootstrap（css3）
+    多页面程序（jquery + bootstrap）
+    单页面程序 教务系统（vue vuex vuerouter elementui 【组件库】）
+    bootstrap
+        1.全局样式的重置
+        2.布局规则（栅格系统）
+        3.样式（表格，列表，表单）
+        4.组件
+            模态框
+            轮播图
+
+            轮子（框架）
+
+
+
+
+
+
+
+            问题：20.超链接访问过后 hover 样式就不出现的问题是什么？
+                答案：被点击访问过的超链接样式不再具有hover 和active 
+                解决方法：改变css属性的排列顺序：l-v-h-a(link visited hover active)
+
+
+
+
+                var gender = 'female';
+                var age = 13;
+
+                function foo(gender){
+                    console.log('xuanzexinbie')
+                    return gender == 'female'
+                }
+                function 
+
+
+
+
+                if(foo(gender) =='male' && bar(age) >12){
+                    console.log('hello boy')
+                }
+
+                parse:对字符串进行详细解析（从左到右）

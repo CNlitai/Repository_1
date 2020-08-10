@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mytest</title>
+    <style>
+        ul {
+            list-style-type: square;
+            list-style-position: inside;
+            list-style-image:url(./csdn-logo.png);
+            margin: 10;
+            font-size: 30px;
+        }
+        /*设置或取消文本修饰（text-decoration）
+                line-through：删除线
+                overline：上划线
+          设置或取消文本阴影（text-shadows）
+          超链接中的cursor属性可调整光标悬浮到链接上的时候光标的形状*/
+        a{
+            font-family: cursive;
+            text-decoration: none;
+            text-shadow: teal;
+            color: #000000;
+            cursor: pointer;
+            /*outline-style:initial;*/
+        }
+        /*通过text-transform将文本改为大写*/
+        #txt,div > form > fieldset > input[name=username],
+        div > form > fieldset > input[name=password] {
+            /*text-transform: uppercase;*/
+            border-radius: 10px;
+            border-style: double;
+            border-width: 0.3em;
+        }
+        #bottom {
+            margin: 0;
+            display: inline;
+        }
+        /*通过line-hight设置行距*/
+        #form1 {
+            text-align: center;
+            line-height: 2em;
+        }
+        /*positon可将div固定到页面位置*/
+        #div1 {
+            text-align: center;
+            display: inline;
+            /*position: fixed;*/
+        }
+        #div1 > form > fieldset {
+            width: 300px;
+            background-color: lightskyblue;
+            color: #f4f4f4;
+            border-radius: 10px;
+        }
+        #div1 > form > fieldset > legend {
+            color: blueviolet;
+            background-color:thistle;
+            border-radius: 10px;
+        }
+        /*悬停在上方时，触发选择器
+        :link :有链接时触发选择器
+        :visited  :页面打开则已被触发（首行a标签权值小为什么没有被覆盖？）*/
+        table > thead tr > th > a:hover{
+            background-color: lightskyblue;
+            color: #f4f4f4;
+        }
+        /*兄弟选择器（非相邻）*/
+        table > tbody > .tr ~ .tr3 {
+            color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://121.199.29.84/1-hello.html" target="_self">hello一下</a><br>
+    <a href="javascript:void(0);" id="top">Im top</a><br>
+    <a href="#bottom"><i>Back To Bottom</i></a><br>
+    <table border="1" cellspacing="0" width="80%" align="center">
+        <caption></caption>
+        <thead>
+            <tr>
+                <th><a href="https://www.baidu.com">NumBer</a></th>
+                <th>姓名</th>
+                <th>学号</th>
+                <th>班级</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="left" class="tr">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr align="center" class="tr2">
+                <td>1</td>
+                <td colspan="2">2</td>
+                <td>4</td>
+            </tr>
+            <tr align="right" class="tr3">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table><br>
+    <ul title="num">
+        <label><a href="#bottom"><li>1  To Bottom</li></a></label>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div id="div1">
+        <form id="form1" action="http://121.199.29.84:5588/user/login" method="GET" enctype="multipart/form-data">
+            <fieldset>
+                <legend>信息收集表单</legend>
+                yourName: <input type="text" name="username"><br>
+                yourPasswd: <input type="password" name="password"><br>
+                yourGender: 
+                <label><!--label的作用是即使没有点击到按钮，而是点击了文本，也会选定该按钮-->
+                    MR<input type="radio" value="male" name="gender" checked>
+                </label>
+
+                <label for="radio_gender_famale">
+                    MRs<input type="radio" id="radio_gender_famale" value="famale" name="gender">
+                </label><br>
+                hobbies: 
+                <label>
+                    <input type="checkbox" name="hobbies" value="basketball">basketball
+                    <input type="checkbox" name="hobbies" value="football">football
+                    <input type="checkbox" name="hobbies" value="running">running
+                    <input type="checkbox" name="hobbies" value="swimming" checked>swimming
+                </label>
+                <br>
+                youricon:
+                <input type="file" name="file">
+                <br>
+                <select name="clazz" id="clazz">
+                    <option>no.1 clazz</option>
+                    <option value="2">no.2 clazz</option>
+                    <option value="3" selected>no.3 clazz</option>
+                    <option value="4">no.4 clazz</option>
+                </select>
+                <br>
+                textarea:
+                <textarea name="txt" id="txt" cols="30" rows="10">ss</textarea>
+                <br>
+                <input type="submit" value="login">
+            </fieldset>
+        </form>
+    </div>
+    <select name="select1" id="select1">
+        <optgroup label="group 1">
+        <option value="1">1.1</option>
+        </optgroup>
+        <optgroup label="group 2">
+        <option value="2.1">2.1</option>
+        <option value="2.2">2.2</option>
+        </optgroup>
+        <optgroup label="group 3">
+        <option value="3.1">3.1</option>
+        <option value="3.2">3.2</option>
+        <option value="3.3">3.3</option>
+        </optgroup>
+    </select>
+    <br>
+    <progress value="70" max="100"></progress>
+    <br>
+    <label>Chose a browser from this list:<br>
+        <input list="browsers" name="mybroswer"></label>
+    <datalist id="browswers">
+        <option value="qwer"></option>
+        <option value="qwert"></option>
+        <option value="qwerty"></option>
+        <option value="qwertyu"></option>
+    </datalist>
+    <br>
+    <div style="height: 800px;"></div>
+    <div id="bottom" ><strong>Im bottom kslkdksaaks</strong></div><br>
+    <a href="#top">Back To top</a>
+</body>
+</html>

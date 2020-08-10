@@ -1,0 +1,121 @@
+1.学习方式
+    Linux环境下
+    编辑器  vi
+    执行环境    Linux
+
+2.介绍
+    js
+        在浏览器运行，进行表单验证，页面的局部更新（dom操作）
+            {浏览器的操作（bom操作）。js解释器，ie，网景（火狐前身）推出自己的浏览器
+            浏览器中具有js解释器；由于js解释器不统一，js标准就不一样，兼容性问题！}
+
+            ECMA{}
+            ECMAscript（es5只有这个才是真正的标准）     javascript标准
+                语法
+                变量，关键字，保留字，白哦大师，流程控制语句，对象，函数，数组。。。
+                    number类型
+
+            DOM：document object model 文档对象模型，浏览器厂商通过es5编写的控制html/css的代码
+                document.getelementbyid();
+                dom.addeventlistener()
+                dom.attachevent()
+
+            BOM:broswer object model 浏览器对象模型，浏览器厂商通过es5编写的控制浏览器的代码
+                aler（）；
+
+
+                settimeout（function（）{
+                    //
+                }.1000）
+
+                xmlHTTPrequest（ajax）
+
+            
+            
+            在nodejs中，不存在兼容性问题，因为nodejs中压根就没有dom/bom，因此切记不要在nodejs中
+            执行dom和bom代码，由于不存在兼容新问题，nidejs是可以大量发挥js高级标准，ES6语法一般     （nodejs可以运行ES5）
+            可以在nodejs中可以完全运行
+
+
+3.helloworld
+    1）在nodejs中
+        1.通过vi编辑（es5）
+        2.通过nodejs来执行
+    2）在浏览器
+        1.通过vscode编辑（es5，dom，bom）
+        2.通过浏览器来执行
+
+
+4.注释
+    html:    <!---->
+    css:    /**/
+    js:    //单行注释
+            /*多行注释*/
+
+
+5.关键字保留字
+6.变量
+    1）js是弱类型语言
+        1）变量的数据类型在初始化的时候
+        2）变量的数据类型可以随时发生改变
+        3）类型细分不明显
+
+        var a； a = 2；
+
+        Java是强类型语言，
+            1）变量的类型在声明的时候确定
+            2）变量的数据类型一旦确定不能改变
+            int a；
+            string b
+
+    2）var
+        1.变量可以重复声明
+
+
+        2.变量声明会被提升
+        console.log(a);
+        var a = 3;
+        输出：undefined
+        3.var声明的变量没有局部作用域
+        function foo（）{
+            if（true）{
+                console.log(a)
+            }
+        }
+
+7.数据类型
+    1）分类
+        1.基本数据类型
+            number
+            string
+            boolean
+            null
+            undefined
+
+        2.引用数据类型（指针）
+            除了基本数据类型之外的所有其他数据类型被称为引用数据类型
+    2）类型检测
+        let
+
+
+        深拷贝不会改变被拷贝的值
+        浅拷贝可能会改变值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    请你求出最大公约数
+    
+        注册：
+            手机号
+            Email

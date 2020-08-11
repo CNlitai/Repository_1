@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <div></div>
+        </div>
+    <h1 id="h1_1">hello world</h1>
+
+    </div>
+    <script>
+        var dom = document.getElementById("app")
+        setTimeout(() =>{
+            var new_h3 = document.createElement("h3");
+            new_h3.innerText = "end...";
+            new_h3.style.color = "teal";
+            
+            // dom.appendChild(new_h3);
+            dom.insertBefore(new_h3,h1_1);
+        },2000);
+    </script>
+    
+</body>
+</html>
